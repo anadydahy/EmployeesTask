@@ -1,0 +1,20 @@
+﻿@model EmployeeDeleteViewModel
+@{
+    ViewBag.PageTitle = "Delete";
+}
+
+<h1>Delete Confirmation</h1>
+
+<div class="alert alert-danger">
+
+    <h5>Are you sure you want to delete employee - @Model.Name</h5>
+    <form method="post">
+
+        <input hidden asp-for="Id" />
+        <input hidden asp-for="Name" />
+
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a asp-controller="home" asp-action="index" class="btn btn-primary">No</a>
+
+    </form>
+</div>
